@@ -11,10 +11,9 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  if (req.body._id == '') {
-        insertRecord(req, res);
-  }
-  else {
+  if (req.body._id == "") {
+    insertRecord(req, res);
+  } else {
     updateRecord(req, res);
   }
 });
@@ -53,8 +52,7 @@ function insertRecord(req, res) {
     if (!err) {
       // res.redirect("employee/addOrEdit");
       res.redirect("employee/list");
-    } 
-    else {
+    } else {
       console.log("Error in inserting record : " + err);
     }
     // else {
